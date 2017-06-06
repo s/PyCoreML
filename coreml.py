@@ -39,11 +39,6 @@ data = digits_dataset.images.reshape((n_samples, -1))
 # Creating the classifier
 classifier = svm.SVC(gamma=0.001)
 
-
-# We learn the digits on the first half of the digits
-classifier.fit(data[:n_samples / 2], digits_dataset.target[:n_samples / 2])
-
-
 """
 Now we are splitting training and testing data.
 X_train means the array of train images
